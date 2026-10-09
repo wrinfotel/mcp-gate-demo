@@ -1,0 +1,17 @@
+{
+  "name": "mcp-gate-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx server.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.4",
+    "@modelcontextprotocol/hono": "^2.0.2",
+    "@modelcontextprotocol/server": "^2.3.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.0"
+  }
+}

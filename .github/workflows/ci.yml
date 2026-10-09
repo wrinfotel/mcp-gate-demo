@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  conformance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Start MCP server
+        run: |
+          npm start &
+          for i in $(seq 1 20); do
+            curl -fsS http://localhost:3000/health && break
+            sleep 1
+          done
+
+      - name: MCP conformance gate
+        uses: wrinfotel/mcp-gate@v0.1
+        with:
+          url: http://localhost:3000/mcp
