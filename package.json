@@ -6,12 +6,18 @@
     "start": "tsx server.ts"
   },
   "dependencies": {
-    "@hono/node-server": "^2.1.4",
-    "@modelcontextprotocol/hono": "^2.0.2",
+    "@modelcontextprotocol/express": "^2.0.2",
+    "@modelcontextprotocol/node": "^2.1.1",
     "@modelcontextprotocol/server": "^2.3.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
     "zod": "^4.6.5"
   },
   "devDependencies": {
-    "tsx": "^4.20.0"
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
   }
 }
