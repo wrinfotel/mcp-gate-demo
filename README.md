@@ -13,3 +13,4 @@ This repo is a **full-coverage reference MCP server** (tools, resources, prompts
 Draft-spec `tasks-*` extension scenarios (SEP-1686) are intentionally out of scope — they are not scored by the runner.
 
 The whole integration lives in [.github/workflows/ci.yml](.github/workflows/ci.yml) — three lines of Action config on top of a normal "install and start the server" job.
+A closed [PR #1](https://github.com/wrinfotel/mcp-gate-demo/pull/1) shows the live report comment posted by the Action.
